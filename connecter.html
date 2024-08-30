@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Se connecter</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function validateLoginForm() {
+            var email = document.getElementById("e-mail").value;
+            var password = document.getElementById("password").value;
+
+            if (email === "" || password === "") {
+                alert("Tous les champs doivent être remplis.");
+                return false;
+            }
+
+            // Si tout est bon, rediriger vers homepage.html
+            window.location.href = "homepage.html";
+            return false; // Empêcher l'envoi du formulaire si utilisé
+        }
+    </script>
+</head>
+<body>
+    <div class="all">
+        <div class="head">
+            <h1>B.S.D App</h1>
+            <p>Se connecter sur B.S.D App</p>
+        </div>
+        <div class="bod">
+            <input type="email" name="e-mail" id="e-mail" placeholder="samo@gmail.com" required><br><br>
+            <input type="password" name="password" id="password" placeholder="Mot de passe" required><br><br>
+        </div>
+        <button onclick="return validateLoginForm()">Se connecter</button>
+        <p>Vous n'avez pas de compte <a href="fichier.html">créez-le</a></p>
+    </div>
+</body>
+</html>

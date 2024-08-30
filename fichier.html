@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un compte</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("e-mail").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm-password").value;
+
+            
+
+            if (password !== confirmPassword) {
+                alert("Les mots de passe ne correspondent pas.");
+                return false;
+            }
+
+            // Si tout est bon, rediriger vers homepage.html
+            window.location.href = "homepage.html";
+            return false; // Empêcher l'envoi du formulaire si utilisé
+        }
+    </script>
+</head>
+<body>
+    <div class="all">
+        <div class="head">
+            <h1>B.S.D App</h1>
+            <p>Créer un compte sur B.S.D App</p>
+        </div>
+        <div class="bod">
+            <input type="text" name="name" id="name" placeholder="Nom & prénom" ><br><br>
+            <input type="email" name="e-mail" id="e-mail" placeholder="samo@gmail.com" ><br><br>
+            <input type="password" name="password" id="password" placeholder="Mot de passe" ><br><br>
+            <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirmer votre mot de passe" required><br><br>
+        </div>
+        <button onclick="return validateForm()">Créer</button>
+        <p>Vous avez un compte <a href="connecter.html">Connectez-vous</a></p>
+    </div>
+</body>
+</html>

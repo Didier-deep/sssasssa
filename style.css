@@ -1,0 +1,24 @@
+body{
+    text-align: center;
+
+}
+.all{
+    background: rgb(201, 133, 133);
+    font-size: medium;
+    border: 10px;
+    margin: 480px; 
+    margin-top: 10px;
+    border-radius: 15px;
+}
+input{
+    border-radius: 10px;
+}
+button{
+    cursor: pointer;
+    border-radius: 10px;
+}
+button :hover{
+    color: blue;
+    border-radius: 7px;
+    background-color: brown;
+}
